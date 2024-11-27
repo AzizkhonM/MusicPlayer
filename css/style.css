@@ -1,0 +1,18 @@
+/* div {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+audio {
+    display: none;
+}
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
