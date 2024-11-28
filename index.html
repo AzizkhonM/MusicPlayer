@@ -6,6 +6,23 @@
     <title>Music Player</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon/music-notes.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- <div>
@@ -14,6 +31,40 @@
         <input type="range" id="timeSlider" value="0" min="0" max="100" step="1">
         <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
     </div> -->
+
+    <div class="background">
+        <div class="bg-black h-[100vh] bg-opacity-50">
+            <div class="container mx-auto">
+                <div class="main grid grid-cols-3 items-center">
+                    <div class="time"  style="text-align: left;">
+                        <b><h1 style="font-size: 3rem;" id="hourminute"></h1></b>
+                        <b><h1 id="day"></h1></b>
+                    </div>
+                    <div class="weather" style="text-align: center;">
+                        <b><h1 style="font-size: 3rem;" id="degree"></h1></b>
+                        <b><h1 id="weather_type"></h1></b>
+                    </div>
+                    <div class="user grid grid-cols-4 items-center" style="text-align: right;">
+                        <div class="col-span-2 flex justify-end"><img src="img/man.png" width="30%" alt=""></div>
+                        <div class="col-span-2 flex justify-start" style="flex-direction: column;">
+                            <b><h1 style="font-size: 2rem; overflow-wrap: break-word;">@azizkhon</h1></b>
+                            <b><h1>Azizkhon Muzaffarov</h1></b>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 items-center mt-7">
+                    <div id="about_track">
+                        <h1 id="artist" class="text-2xl mb-4">The Weeknd</h1>
+                        <h1 id="track" class="text-5xl mb-4">Blinding Lights</h1>
+                        <h1 id="album" class="text-1xl mb-7">After Hours</h1>
+                        <div class="grid grid-cols-2"><img draggable="false" src="/img/cover/AfterHours_Cover.jpg" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotating" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
+                    </div>
+                    <div class="lyrics bg-black bg-opacity-40"><p id="lyrics_text"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/js/main.js"></script>
 </body>

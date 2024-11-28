@@ -1,3 +1,76 @@
+// GET LYRICS FROM TXT
+function getLyrics(a){
+    fetch(`../lyrics/${a}.txt`).then(r=>r.text()).then(text => {
+        const Text = text.replace(/\n/g, '<br>');
+        document.getElementById("lyrics_text").innerHTML = Text
+        
+    })
+}
+
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "Jule",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+]
+
+const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+]
+
+const weather_types = [
+    "Clear sky",
+    "Mainly clear",
+    "Partly cloudy",
+    "Overcast"
+]
+
+function updateTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0'); 
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('hourminute').textContent = `${hours}:${minutes}`;
+    document.getElementById("day").textContent =  `${days[now.getDay() - 1]}, ${months[now.getMonth()]} ${now.getDate()}`
+}
+updateTime()
+setInterval(updateTime, 30000);
+
+async function getWeather() {
+    try {
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=41.375&longitude=69.25&current_weather=true");
+        const data = await response.json();
+        const currentWeather = data.current_weather;
+        
+        document.getElementById("degree").innerHTML = `${currentWeather.temperature}°C`
+        document.getElementById("weather_type").innerHTML = weather_types[currentWeather.weathercode]
+        
+        console.log(`
+Temperature: ${currentWeather.temperature} <br>
+Wind Speed: ${currentWeather.windspeed} km/h <br>
+Weather: ${currentWeather.weathercode}`)
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
+    }
+  }
+
+  getWeather();
+
+  document.getElementById("lyrics_text").innerHTML = getLyrics("BlindingLights")
+
 /*document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("audioPlayer");
     const playPauseButton = document.getElementById("playPauseButton");
@@ -37,12 +110,6 @@
 });*/
 
 
-// GET LYRICS FROM TXT
-
-/*fetch("../lyrics/LetItHappen.txt").then(r=>r.text()).then(text => {
-    console.log(typeof text)
-    let lyrics = document.getElementById("lyrics")
-    const Text = text.replace(/\n/g, '<br>');
-    lyrics.innerHTML = Text
-    lyrics.style.fontFamily = "Consolas"
+/*fetch("../data/data.json").then(r=>r.text()).then(text => {
+    console.log(JSON.parse(text))
 })*/

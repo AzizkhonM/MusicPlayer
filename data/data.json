@@ -1,0 +1,20 @@
+[
+    {
+        "track": "Blinding Lights",
+        "author": "The Weeknd",
+        "album": "After Hours",
+        "cover": "AfterHours_Cover.jpg",
+        "background": "AfterHours_Wallpaper.jpg",
+        "lyrics": "BlindingLights.txt",
+        "audio": "Blinding_Lights.mp3"
+    },
+    {
+        "track": "Dancing in the Flames",
+        "author": "The Weeknd",
+        "album": "Dancing in the Flames",
+        "cover": "DancingInTheFlames_Cover.jpg",
+        "background": "DancingInTheFlames_Wallpaper.png",
+        "lyrics": "DancingInTheFlames.txt",
+        "audio": "Dancing_In_The_Flames.mp3"
+    }
+]
