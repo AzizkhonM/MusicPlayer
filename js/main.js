@@ -7,7 +7,6 @@ function getLyrics(a){
     })
 }
 
-let slide_color = "#7d0004"
 
 const months = [
     "January",
@@ -130,11 +129,43 @@ document.addEventListener("DOMContentLoaded", () => {
         timeSlider.value = progressPercent;
       
         // Update the gradient background
-        timeSlider.style.background = `linear-gradient(to right, ${slide_color} ${progressPercent}%, #ccc ${progressPercent}%)`;
+        timeSlider.style.background = `linear-gradient(to right, #00d6af ${progressPercent}%, #ccc ${progressPercent}%)`;
       });
 });
 
 
-/*fetch("../data/data.json").then(r=>r.text()).then(text => {
-    console.log(JSON.parse(text))
-})*/
+fetch("../data/data.json").then(r=>r.text()).then(text => {
+    const data = JSON.parse(text)
+
+    const list = document.getElementById("card_list")
+    for(let i of data){
+        console.log(i);
+        
+        let card = document.createElement("div")
+        card.setAttribute("class", "card")
+        
+        let cover = document.createElement("img")
+        cover.src = `../img/cover/${i.cover}`
+        cover.setAttribute("class", "card_cover")
+        cover.setAttribute("draggable", "false")
+        card.appendChild(cover)
+        
+        let artist = document.createElement("h1")
+        artist.innerHTML = i.author
+        artist.setAttribute("class", "card_artist")
+        card.appendChild(artist)
+
+        let track = document.createElement("h1")
+        track.innerHTML = i.track
+        track.setAttribute("class", "card_track")
+        card.appendChild(track)
+
+        let album = document.createElement("h1")
+        album.innerHTML = i.album
+        album.setAttribute("class", "card_album")
+        card.appendChild(album)
+
+        list.appendChild(card)
+    }
+})
+

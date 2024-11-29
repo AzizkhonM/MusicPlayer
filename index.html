@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/cards.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon/music-notes.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -71,9 +72,19 @@
             </div>
         </div>
 
-        <div>
-            salom
-            <img src="/img/vinyl.svg" style="--main-color: #00d6af" alt="">
+        <div class="bg-stone-900 h-auto">
+            <div class="container mx-auto py-8 h-auto">
+                <h1 class="text-6xl mb-8 text-white">My Songs</h1>
+                <div id="card_list" class="grid grid-cols-4 gap-14">
+                    
+                    <!-- <div class="card">
+                        <img class="card_cover" src="img/cover/AfterHours_Cover.jpg" alt="">
+                        <h1 class="card_artist">The Weeknd</h1>
+                        <h1 class="card_track">Blinding Lights</h1>
+                        <h1 class="card_album">After Hours</h1>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
 

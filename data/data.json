@@ -6,8 +6,7 @@
         "cover": "AfterHours_Cover.jpg",
         "background": "AfterHours_Wallpaper.jpg",
         "lyrics": "BlindingLights.txt",
-        "audio": "Blinding_Lights.mp3",
-        "color": "#7d0004"
+        "audio": "Blinding_Lights.mp3"
     },
     {
         "track": "Dancing in the Flames",
@@ -17,5 +16,59 @@
         "background": "DancingInTheFlames_Wallpaper.png",
         "lyrics": "DancingInTheFlames.txt",
         "audio": "Dancing_In_The_Flames.mp3"
+    },
+    {
+        "track": "Die with a Smile",
+        "author": "Lady Gaga, Bruno Mars",
+        "album": "Die with a Smile",
+        "cover": "DieWithASmile_Cover.jpg",
+        "background": "DieWithASmile_Wallpaper.png",
+        "lyrics": "DieWithASmile.txt",
+        "audio": "Die_With_A_Smile.mp3"
+    },
+    {
+        "track": "Don't Start Now",
+        "author": "Dua Lipa",
+        "album": "Future Nostalgia",
+        "cover": "FutureNostalgia_Cover.jpg",
+        "background": "FutureNostalgia_Wallpaper.png",
+        "lyrics": "DontStartNow.txt",
+        "audio": "Dont_Start_Now.mp3"
+    },
+    {
+        "track": "End of Beginning",
+        "author": "Djo",
+        "album": "Decide",
+        "cover": "Decide_Cover.jpg",
+        "background": "EndOfBeginnning_Wallpaper.jpg",
+        "lyrics": "EndOfBeginning.txt",
+        "audio": "End_Of_Beginning.mp3"
+    },
+    {
+        "track": "Espresso",
+        "author": "Sabrina Carpenter",
+        "album": "Short n' Sweet",
+        "cover": "ShortnSweet_Cover.jpg",
+        "background": "ShortnSweet_Wallpaper.jpg",
+        "lyrics": "Espresso.txt",
+        "audio": "Espresso.mp3"
+    },
+    {
+        "track": "Heartless",
+        "author": "The Weeknd",
+        "album": "After Hours",
+        "cover": "AfterHours_Cover.jpg",
+        "background": "AfterHours_Wallpaper.jpg",
+        "lyrics": "Heartless.txt",
+        "audio": "Heartless.mp3"
+    },
+    {
+        "track": "In The Night",
+        "author": "The Weeknd",
+        "album": "Beauty Behind The Madness",
+        "cover": "BeautyBehindTheMadness_Cover.jpg",
+        "background": "BeautyBehindTheMadness_Wallpaper.jpg",
+        "lyrics": "InTheNight.txt",
+        "audio": "InTheNight.mp3"
     }
 ]

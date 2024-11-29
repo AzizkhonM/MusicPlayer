@@ -1,0 +1,47 @@
+.card{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border: 0.5px solid white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    height: auto;
+    color: white;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card_cover{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 100%;
+}
+
+.card_artist{
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card_track{
+    margin-left: 24px;
+    margin-right: 24px;
+    font-size: 26px;
+    line-height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_album{
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+}
