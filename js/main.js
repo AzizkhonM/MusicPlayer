@@ -7,6 +7,8 @@ function getLyrics(a){
     })
 }
 
+let slide_color = "#7d0004"
+
 const months = [
     "January",
     "February",
@@ -36,8 +38,16 @@ const weather_types = [
     "Clear sky",
     "Mainly clear",
     "Partly cloudy",
-    "Overcast"
+    "Overcast",
+    "Fog",
+    "Drizzle",
+    "Rain",
+    "Snow",
+    "Rain/snow showers",
+    "Thunderstorm"
 ]
+
+const vinyl = document.getElementById("vinyl")
 
 function updateTime() {
     const now = new Date();
@@ -55,8 +65,12 @@ async function getWeather() {
         const data = await response.json();
         const currentWeather = data.current_weather;
         
-        document.getElementById("degree").innerHTML = `${currentWeather.temperature}°C`
-        document.getElementById("weather_type").innerHTML = weather_types[currentWeather.weathercode]
+        document.getElementById("degree").innerHTML = `${Number(String(currentWeather.temperature)[0])}°C`
+        if(currentWeather.weathercode < 10){
+            document.getElementById("weather_type").innerHTML = weather_types[currentWeather.weathercode]
+        } else{
+            document.getElementById("weather_type").innerHTML = weather_types[Number(String(currentWeather.weathercode)[0])]
+        }
         
         console.log(`
 Temperature: ${currentWeather.temperature} <br>
@@ -71,32 +85,27 @@ Weather: ${currentWeather.weathercode}`)
 
   document.getElementById("lyrics_text").innerHTML = getLyrics("BlindingLights")
 
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("audioPlayer");
     const playPauseButton = document.getElementById("playPauseButton");
     const timeSlider = document.getElementById("timeSlider");
-    const currentTimeDisplay = document.getElementById("currentTime");
-    const durationDisplay = document.getElementById("duration");
 
     playPauseButton.addEventListener("click", () => {
         if (audio.paused) {
             audio.play();
-            playPauseButton.textContent = "Pause";
+            playPauseButton.src = "/img/pause.svg"
+            vinyl.setAttribute("class", "rotating")
         } else {
             audio.pause();
-            playPauseButton.textContent = "Play";
+            playPauseButton.src = "/img/play.svg"
+            vinyl.setAttribute("class", "rotatingg")
         }
     });
 
     audio.addEventListener("timeupdate", () => {
         timeSlider.value = (audio.currentTime / audio.duration) * 100;
-        currentTimeDisplay.textContent = formatTime(audio.currentTime);
     });
 
-    audio.addEventListener("loadedmetadata", () => {
-        timeSlider.max = 100;
-        durationDisplay.textContent = formatTime(audio.duration);
-    });
 
     timeSlider.addEventListener("input", () => {
         audio.currentTime = (timeSlider.value / 100) * audio.duration;
@@ -107,7 +116,23 @@ Weather: ${currentWeather.weathercode}`)
         const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
         return `${mins}:${secs}`;
     }
-});*/
+
+    audio.addEventListener("timeupdate", () => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+      
+        // Calculate progress percentage
+        const progressPercent = (currentTime / duration) * 100;
+        console.log(progressPercent);
+        
+      
+        // Update the slider's value
+        timeSlider.value = progressPercent;
+      
+        // Update the gradient background
+        timeSlider.style.background = `linear-gradient(to right, ${slide_color} ${progressPercent}%, #ccc ${progressPercent}%)`;
+      });
+});
 
 
 /*fetch("../data/data.json").then(r=>r.text()).then(text => {

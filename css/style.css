@@ -11,16 +11,19 @@
     font-family: "Spotify";
 }
 
-.background{
-    height: 100vh;
-    background-image: url('/img/background/AfterHours_Wallpaper.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.music_background{
+  background-image: url('/img/background/AfterHours_Wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main{
     padding-top: 20px;
+}
+
+.buttons img:hover{
+  cursor: pointer;
 }
 
 .lyrics{
@@ -45,6 +48,13 @@ input[type="range"] {
     margin: 10px 0;
 } */
 
+input[type="range"] {
+  -webkit-appearance: none; /* Remove default styling */
+  background: linear-gradient(to right,#ccc 50%); /* Orange for passed */
+  border-radius: 5px;
+  outline: none;
+}
+
 
 
 
@@ -59,7 +69,7 @@ input[type="range"] {
 
  .rotating {
     border-radius: 50%;
-    animation: rotate360 3s linear infinite;
+    animation: rotate360 5s linear infinite;
   }
 
   @keyframes rotate360 {
@@ -86,11 +96,11 @@ input[type="range"] {
    
   /* Handle */
   .lyrics::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: background-color 1s ease;
+    background-color: #00d6af;
   }
   
   /* Handle on hover */
   .lyrics::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.4;
+    cursor: pointer;
   }

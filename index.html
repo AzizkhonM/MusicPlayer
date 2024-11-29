@@ -25,44 +25,55 @@
 
 </head>
 <body>
-    <!-- <div>
-        <audio id="audioPlayer" src="/music/Dancing_In_The_Flames.mp3"></audio>
-        <button id="playPauseButton">Play</button>
-        <input type="range" id="timeSlider" value="0" min="0" max="100" step="1">
-        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-    </div> -->
 
-    <div class="background">
-        <div class="bg-black h-[100vh] bg-opacity-50">
-            <div class="container mx-auto">
-                <div class="main grid grid-cols-3 items-center">
-                    <div class="time"  style="text-align: left;">
-                        <b><h1 style="font-size: 3rem;" id="hourminute"></h1></b>
-                        <b><h1 id="day"></h1></b>
+    <div class="">
+        <div class="music_background">
+            <div class="bg-black bg-opacity-50">
+                <div class="container mx-auto">
+                    <div class="main grid grid-cols-3 items-center">
+                        <div class="time"  style="text-align: left;">
+                            <b><h1 style="font-size: 3rem;" id="hourminute"></h1></b>
+                            <b><h1 id="day"></h1></b>
+                        </div>
+                        <div class="weather" style="text-align: center;">
+                            <b><h1 style="font-size: 3rem;" id="degree"></h1></b>
+                            <b><h1 id="weather_type"></h1></b>
+                        </div>
+                        <div class="user grid grid-cols-4 items-center" style="text-align: right;">
+                            <div class="col-span-2 flex justify-end"><img src="img/man.png" width="30%" alt=""></div>
+                            <div class="col-span-2 flex justify-start" style="flex-direction: column;">
+                                <b><h1 style="font-size: 2rem; overflow-wrap: break-word;">@azizkhon</h1></b>
+                                <b><h1>Azizkhon Muzaffarov</h1></b>
+                            </div>
+                        </div>
                     </div>
-                    <div class="weather" style="text-align: center;">
-                        <b><h1 style="font-size: 3rem;" id="degree"></h1></b>
-                        <b><h1 id="weather_type"></h1></b>
+                    
+                    <div class="grid grid-cols-2 items-center mt-7">
+                        <div id="about_track">
+                            <h1 id="artist" class="text-2xl mb-4">The Weeknd</h1>
+                            <b><h1 id="track" class="text-5xl mb-4 font-bold">Blinding Lights</h1></b>
+                            <h1 id="album" class="text-1xl mb-7">After Hours</h1>
+                            <div class="grid grid-cols-2"><img draggable="false" class="rounded-lg shadow-xl shadow-neutral-700 hover:shadow-neutral-900 duration-500 hover:cursor-pointer" src="/img/cover/AfterHours_Cover.jpg" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotatingg" id="vinyl" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
+                        </div>
+                        <div class="lyrics bg-black bg-opacity-40"><p id="lyrics_text"></p></div>
                     </div>
-                    <div class="user grid grid-cols-4 items-center" style="text-align: right;">
-                        <div class="col-span-2 flex justify-end"><img src="img/man.png" width="30%" alt=""></div>
-                        <div class="col-span-2 flex justify-start" style="flex-direction: column;">
-                            <b><h1 style="font-size: 2rem; overflow-wrap: break-word;">@azizkhon</h1></b>
-                            <b><h1>Azizkhon Muzaffarov</h1></b>
+                    
+                    <div>
+                        <div class="mt-8">
+                            <audio id="audioPlayer" src="/music/Blinding_Lights.mp3"></audio>
+                            <input type="range" class="w-full h-1 mb-8 bg-gray-400 rounded-lg appearance-auto cursor-pointer range-sm" id="timeSlider" value="0" min="0" max="100" step="0.01">
+                        </div>
+                        <div class="flex justify-center gap-12 pb-8 buttons">
+                            <img src="/img/previous.svg" alt="" draggable="false" width="30px"><img src="/img/play.svg" id="playPauseButton" alt="" draggable="false" width="30px"><img src="/img/next.svg" alt="" draggable="false" width="30px">
                         </div>
                     </div>
                 </div>
-                
-                <div class="grid grid-cols-2 items-center mt-7">
-                    <div id="about_track">
-                        <h1 id="artist" class="text-2xl mb-4">The Weeknd</h1>
-                        <h1 id="track" class="text-5xl mb-4">Blinding Lights</h1>
-                        <h1 id="album" class="text-1xl mb-7">After Hours</h1>
-                        <div class="grid grid-cols-2"><img draggable="false" src="/img/cover/AfterHours_Cover.jpg" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotating" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
-                    </div>
-                    <div class="lyrics bg-black bg-opacity-40"><p id="lyrics_text"></p></div>
-                </div>
             </div>
+        </div>
+
+        <div>
+            salom
+            <img src="/img/vinyl.svg" style="--main-color: #00d6af" alt="">
         </div>
     </div>
 
