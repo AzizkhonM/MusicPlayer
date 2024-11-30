@@ -1,12 +1,12 @@
 // GET LYRICS FROM TXT
 function getLyrics(a){
-    fetch(`../lyrics/${a}.txt`).then(r=>r.text()).then(text => {
+    fetch(`../lyrics/${a}`).then(r=>r.text()).then(text => {
         const Text = text.replace(/\n/g, '<br>');
         document.getElementById("lyrics_text").innerHTML = Text
-        
     })
 }
 
+const color = "#c57613"
 
 const months = [
     "January",
@@ -56,7 +56,7 @@ function updateTime() {
     document.getElementById("day").textContent =  `${days[now.getDay() - 1]}, ${months[now.getMonth()]} ${now.getDate()}`
 }
 updateTime()
-setInterval(updateTime, 30000);
+setInterval(updateTime, 10000);
 
 async function getWeather() {
     try {
@@ -82,24 +82,31 @@ Weather: ${currentWeather.weathercode}`)
 
   getWeather();
 
-  document.getElementById("lyrics_text").innerHTML = getLyrics("BlindingLights")
-
 document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("audioPlayer");
     const playPauseButton = document.getElementById("playPauseButton");
     const timeSlider = document.getElementById("timeSlider");
+    const previousButton = document.getElementById("previousButton")
 
     playPauseButton.addEventListener("click", () => {
         if (audio.paused) {
             audio.play();
             playPauseButton.src = "/img/pause.svg"
+            playPauseButton.style.width = "29px"
             vinyl.setAttribute("class", "rotating")
         } else {
             audio.pause();
             playPauseButton.src = "/img/play.svg"
+            playPauseButton.style.width = "30px"
             vinyl.setAttribute("class", "rotatingg")
         }
     });
+
+    previousButton.addEventListener("click", () => {
+        if(audio.currentTime < 5){
+            audio.currentTime = 0
+        }
+    })
 
     audio.addEventListener("timeupdate", () => {
         timeSlider.value = (audio.currentTime / audio.duration) * 100;
@@ -110,62 +117,95 @@ document.addEventListener("DOMContentLoaded", () => {
         audio.currentTime = (timeSlider.value / 100) * audio.duration;
     });
 
-    function formatTime(seconds) {
-        const mins = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
-        return `${mins}:${secs}`;
-    }
-
     audio.addEventListener("timeupdate", () => {
         const currentTime = audio.currentTime;
         const duration = audio.duration;
       
         // Calculate progress percentage
         const progressPercent = (currentTime / duration) * 100;
-        console.log(progressPercent);
+        console.log(progressPercent)
+        console.log(audio.currentTime);
+        
+
+        if(progressPercent == 100){
+            audio.pause();
+            audio.currentTime = 0
+            playPauseButton.src = "/img/play.svg"
+            vinyl.setAttribute("class", "rotatingg")
+        }
         
       
         // Update the slider's value
         timeSlider.value = progressPercent;
       
         // Update the gradient background
-        timeSlider.style.background = `linear-gradient(to right, #00d6af ${progressPercent}%, #ccc ${progressPercent}%)`;
+        timeSlider.style.background = `linear-gradient(to right, ${color} ${progressPercent}%, #ccc ${progressPercent}%)`;
       });
 });
 
-
 fetch("../data/data.json").then(r=>r.text()).then(text => {
     const data = JSON.parse(text)
-
+    
+    let element = Math.round(Math.random() * 19)
+    console.log(element);
+    
+    getLyrics(data[element].lyrics)
+    document.getElementById("artist").innerHTML = data[element].author
+    document.getElementById("track").innerHTML = data[element].track
+    document.getElementById("album").innerHTML = data[element].album
+    document.getElementById("cover").src = `../img/cover/${data[element].cover}`
+    document.querySelector(".music_background").style.backgroundImage = `url(../img/background/${data[element].background})`
+    document.querySelector("audio").src = `../music/${data[element].audio}`
+    setTimeout(() => {
+        document.querySelector("#timeSlider").value = 0;
+        document.querySelector("#timeSlider").max = 100;
+    }, 100);
+    console.log(document.querySelector("audio").currentTime);
+    console.log(document.querySelector("#timeSlider").value, document.querySelector("#timeSlider").max);
+    
     const list = document.getElementById("card_list")
     for(let i of data){
-        console.log(i);
-        
-        let card = document.createElement("div")
+        // console.log(i);
+
+        /*let card = document.createElement("div")
         card.setAttribute("class", "card")
         
         let cover = document.createElement("img")
         cover.src = `../img/cover/${i.cover}`
         cover.setAttribute("class", "card_cover")
         cover.setAttribute("draggable", "false")
-        card.appendChild(cover)
-        
+        card.appendChild(cover)*/
+
+        let card2 = document.createElement("div")
+        card2.setAttribute("class", "card2")
+        card2.style.backgroundImage = `url(../img/cover/${i.cover})`
+
+        let gradient = document.createElement("div")
+        gradient.setAttribute("class", "gradient2")
+        card2.appendChild(gradient)
+
+        let box = document.createElement("div")
+        gradient.appendChild(box)
+
         let artist = document.createElement("h1")
         artist.innerHTML = i.author
         artist.setAttribute("class", "card_artist")
-        card.appendChild(artist)
+        box.appendChild(artist)
 
         let track = document.createElement("h1")
         track.innerHTML = i.track
         track.setAttribute("class", "card_track")
-        card.appendChild(track)
+        box.appendChild(track)
 
         let album = document.createElement("h1")
         album.innerHTML = i.album
         album.setAttribute("class", "card_album")
-        card.appendChild(album)
+        box.appendChild(album)
 
-        list.appendChild(card)
+        list.appendChild(card2)
     }
 })
 
+const gradient = document.querySelector(".gradient")
+const height = gradient.offsetHeight;
+gradient.style.marginTop = `-${height}px`;

@@ -49,12 +49,12 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-2 items-center mt-7">
+                    <div class="grid main grid-cols-2 items-center mt-7">
                         <div id="about_track">
-                            <h1 id="artist" class="text-2xl mb-4">The Weeknd</h1>
-                            <b><h1 id="track" class="text-5xl mb-4 font-bold">Blinding Lights</h1></b>
-                            <h1 id="album" class="text-1xl mb-7">After Hours</h1>
-                            <div class="grid grid-cols-2"><img draggable="false" class="rounded-lg shadow-xl shadow-neutral-700 hover:shadow-neutral-900 duration-500 hover:cursor-pointer" src="/img/cover/AfterHours_Cover.jpg" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotatingg" id="vinyl" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
+                            <h1 id="artist" class="text-2xl mb-4"></h1>
+                            <b><h1 id="track" class="text-5xl mb-4 font-bold"></h1></b>
+                            <h1 id="album" class="text-1xl mb-7"></h1>
+                            <div class="grid grid-cols-2"><img draggable="false" class="rounded-lg shadow-xl shadow-neutral-700 hover:shadow-neutral-900 duration-500 hover:cursor-pointer" src="" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotatingg" id="vinyl" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
                         </div>
                         <div class="lyrics bg-black bg-opacity-40"><p id="lyrics_text"></p></div>
                     </div>
@@ -62,10 +62,10 @@
                     <div>
                         <div class="mt-8">
                             <audio id="audioPlayer" src="/music/Blinding_Lights.mp3"></audio>
-                            <input type="range" class="w-full h-1 mb-8 bg-gray-400 rounded-lg appearance-auto cursor-pointer range-sm" id="timeSlider" value="0" min="0" max="100" step="0.01">
+                            <input type="range" class="w-full h-1 mb-8 bg-gray-400 rounded-lg appearance-auto cursor-pointer range-sm" id="timeSlider" min="0" max="100" step="0.01">
                         </div>
                         <div class="flex justify-center gap-12 pb-8 buttons">
-                            <img src="/img/previous.svg" alt="" draggable="false" width="30px"><img src="/img/play.svg" id="playPauseButton" alt="" draggable="false" width="30px"><img src="/img/next.svg" alt="" draggable="false" width="30px">
+                            <img src="/img/previous.svg" alt="" id="previousButton" draggable="false" width="30px"><img src="/img/play.svg" id="playPauseButton" alt="" draggable="false" width="30px"><img src="/img/next.svg" alt="" draggable="false" width="30px">
                         </div>
                     </div>
                 </div>
@@ -77,11 +77,24 @@
                 <h1 class="text-6xl mb-8 text-white">My Songs</h1>
                 <div id="card_list" class="grid grid-cols-4 gap-14">
                     
-                    <!-- <div class="card">
-                        <img class="card_cover" src="img/cover/AfterHours_Cover.jpg" alt="">
-                        <h1 class="card_artist">The Weeknd</h1>
-                        <h1 class="card_track">Blinding Lights</h1>
-                        <h1 class="card_album">After Hours</h1>
+                        <!-- <div class="card">
+                            <div class="card_cover_gradient grid grid-cols-2">
+                                <img class="card_cover col-span-2" src="img/cover/AfterHours_Cover.jpg" alt="">
+                                <div style="width: 100%; aspect-ratio: 1 /1; margin-top: auto;" class="col-span-2 gradient"></div>
+                            </div>
+                            <h1 class="card_artist">The Weeknd</h1>
+                            <h1 class="card_track">Blinding Lights</h1>
+                            <h1 class="card_album">After Hours</h1>
+                        </div> -->
+
+                    <!-- <div class="card2">
+                        <div class="gradient2">
+                            <div>
+                                <h1 class="card_artist">The Weeknd</h1>
+                                <h1 class="card_track">Blinding Lights</h1>
+                                <h1 class="card_album">After Hours</h1>
+                            </div>
+                        </div>
                     </div> -->
                 </div>
             </div>

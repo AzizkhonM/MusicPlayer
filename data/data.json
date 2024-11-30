@@ -22,7 +22,7 @@
         "author": "Lady Gaga, Bruno Mars",
         "album": "Die with a Smile",
         "cover": "DieWithASmile_Cover.jpg",
-        "background": "DieWithASmile_Wallpaper.png",
+        "background": "DieWithASmile_Wallpaper.jpg",
         "lyrics": "DieWithASmile.txt",
         "audio": "Die_With_A_Smile.mp3"
     },
@@ -31,7 +31,7 @@
         "author": "Dua Lipa",
         "album": "Future Nostalgia",
         "cover": "FutureNostalgia_Cover.jpg",
-        "background": "FutureNostalgia_Wallpaper.png",
+        "background": "FutureNostalgia_Wallpaper.jpg",
         "lyrics": "DontStartNow.txt",
         "audio": "Dont_Start_Now.mp3"
     },
@@ -69,6 +69,114 @@
         "cover": "BeautyBehindTheMadness_Cover.jpg",
         "background": "BeautyBehindTheMadness_Wallpaper.jpg",
         "lyrics": "InTheNight.txt",
-        "audio": "InTheNight.mp3"
+        "audio": "In_The_Night.mp3"
+    },
+    {
+        "track": "Let It Happen",
+        "author": "Tame Impala",
+        "album": "Currents",
+        "cover": "Currents_Cover.jpg",
+        "background": "Currents_Wallpaper.jpg",
+        "lyrics": "LetItHappen.txt",
+        "audio": "Let_It_Happen.mp3"
+    },
+    {
+        "track": "Midnight City",
+        "author": "M83",
+        "album": "Hurry Up, We're Dreaming",
+        "cover": "HurryUpWereDreaming_Cover.jpg",
+        "background": "HurryUpWereDreaming_Wallpaper.jpg",
+        "lyrics": "MidnightCity.txt",
+        "audio": "Midnight_City.mp3"
+    },
+    {
+        "track": "Nightcall",
+        "author": "Kavinsky",
+        "album": "Outrun",
+        "cover": "Outrun_Cover.jpg",
+        "background": "Outrun_Wallpaper.jpg",
+        "lyrics": "Nightcall.txt",
+        "audio": "Nightcall.mp3"
+    },
+    {
+        "track": "One Kiss",
+        "author": "Calvin Harris, Dua Lipa",
+        "album": "One Kiss",
+        "cover": "OneKiss_Cover.jpg",
+        "background": "OneKiss_Wallpaper.png",
+        "lyrics": "OneKiss.txt",
+        "audio": "One_Kiss.mp3"
+    },
+    {
+        "track": "Please Please Please",
+        "author": "Sabrina Carpenter",
+        "album": "Short n' Sweet",
+        "cover": "ShortnSweet_Cover.jpg",
+        "background": "ShortnSweet_Wallpaper.jpg",
+        "lyrics": "PleasePleasePlease.txt",
+        "audio": "Please_Please_Please.mp3"
+    },
+    {
+        "track": "Reminder",
+        "author": "The Weeknd",
+        "album": "Starboy",
+        "cover": "Starboy_Cover.jpg",
+        "background": "Starboy_Wallpaper.png",
+        "lyrics": "Reminder.txt",
+        "audio": "Reminder.mp3"
+    },
+    {
+        "track": "Save Your Tears",
+        "author": "The Weeknd",
+        "album": "After Hours",
+        "cover": "AfterHours_Cover.jpg",
+        "background": "AfterHours_Wallpaper.jpg",
+        "lyrics": "SaveYourTears.txt",
+        "audio": "Save_Your_Tears.mp3"
+    },
+    {
+        "track": "Starboy",
+        "author": "The Weeknd",
+        "album": "Starboy",
+        "cover": "Starboy_Cover.jpg",
+        "background": "Starboy_Wallpaper.png",
+        "lyrics": "Starboy.txt",
+        "audio": "Starboy.mp3"
+    },
+    {
+        "track": "the boy is mine",
+        "author": "Ariana Grande",
+        "album": "eternal sunshine",
+        "cover": "EternalSunshine_Cover.jpg",
+        "background": "EternalSunshine_Wallpaper.jpg",
+        "lyrics": "TheBoyIsMine.txt",
+        "audio": "The_Boy_Is_Mine.mp3"
+    },
+    {
+        "track": "The Hills",
+        "author": "The Weeknd",
+        "album": "Beauty Behind The Madness",
+        "cover": "BeautyBehindTheMadness_Cover.jpg",
+        "background": "BeautyBehindTheMadness_Wallpaper.jpg",
+        "lyrics": "TheHills.txt",
+        "audio": "The_Hills.mp3"
+    },
+    {
+        "track": "Uptown Funk",
+        "author": "Mark Ronson, Bruno Mars",
+        "album": "Uptown Special",
+        "cover": "UptownSpecial_Cover.jpg",
+        "background": "UptownSpecial_Wallpaper.png",
+        "lyrics": "UptownFunk.txt",
+        "audio": "Uptown_Funk.mp3"
+    },
+    {
+        "track": "we can't be friends (wait for your love)",
+        "author": "Ariana Grande",
+        "album": "eternal sunshine",
+        "cover": "EternalSunshine_Cover.jpg",
+        "background": "EternalSunshine_Wallpaper.jpg",
+        "lyrics": "WeCantBeFriends.txt",
+        "audio": "We_Cant_Be_Friends.mp3"
     }
 ]

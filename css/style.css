@@ -12,7 +12,6 @@
 }
 
 .music_background{
-  background-image: url('/img/background/AfterHours_Wallpaper.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,7 +60,7 @@ input[type="range"] {
   width: 25px;
   height: 25px;
   border-radius: 50%; 
-  background: #04AA6D;
+  color: #04AA6D;
   cursor: pointer;
 }
 
@@ -104,7 +103,7 @@ input[type="range"] {
    
   /* Handle */
   .lyrics::-webkit-scrollbar-thumb {
-    background-color: #00d6af;
+    background-color: #c57613;
   }
   
   /* Handle on hover */
