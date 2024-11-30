@@ -2,11 +2,30 @@
 function getLyrics(a){
     fetch(`../lyrics/${a}`).then(r=>r.text()).then(text => {
         const Text = text.replace(/\n/g, '<br>');
-        document.getElementById("lyrics_text").innerHTML = Text
+        document.querySelector("#lyrics_text").innerHTML = Text
     })
 }
 
 const color = "#c57613"
+let data = ""
+
+function main_filler(){
+    let element = Math.round(Math.random() * 19)
+    console.log(element);
+    
+
+    getLyrics(data[element].lyrics)
+    document.getElementById("artist").innerHTML = data[element].author
+    document.getElementById("track").innerHTML = data[element].track
+    document.getElementById("album").innerHTML = data[element].album
+    document.getElementById("cover").src = `../img/cover/${data[element].cover}`
+    document.querySelector(".music_background").style.backgroundImage = `url(../img/background/${data[element].background})`
+    document.querySelector("audio").src = `../music/${data[element].audio}`
+    setTimeout(() => {
+        document.querySelector("#timeSlider").value = 0;
+        document.querySelector("#timeSlider").max = 100;
+    }, 100);
+}
 
 const months = [
     "January",
@@ -87,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const playPauseButton = document.getElementById("playPauseButton");
     const timeSlider = document.getElementById("timeSlider");
     const previousButton = document.getElementById("previousButton")
+    const nextButton = document.getElementById("nextButton")
 
     playPauseButton.addEventListener("click", () => {
         if (audio.paused) {
@@ -106,6 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if(audio.currentTime < 5){
             audio.currentTime = 0
         }
+    })
+
+    nextButton.addEventListener("click", () => {
+        main_filler()
+        audio.play()
+        playPauseButton.src = "/img/pause.svg"
+        playPauseButton.style.width = "29px"
+        vinyl.setAttribute("class", "rotating")
     })
 
     audio.addEventListener("timeupdate", () => {
@@ -144,24 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 fetch("../data/data.json").then(r=>r.text()).then(text => {
-    const data = JSON.parse(text)
-    
-    let element = Math.round(Math.random() * 19)
-    console.log(element);
-    
-    getLyrics(data[element].lyrics)
-    document.getElementById("artist").innerHTML = data[element].author
-    document.getElementById("track").innerHTML = data[element].track
-    document.getElementById("album").innerHTML = data[element].album
-    document.getElementById("cover").src = `../img/cover/${data[element].cover}`
-    document.querySelector(".music_background").style.backgroundImage = `url(../img/background/${data[element].background})`
-    document.querySelector("audio").src = `../music/${data[element].audio}`
-    setTimeout(() => {
-        document.querySelector("#timeSlider").value = 0;
-        document.querySelector("#timeSlider").max = 100;
-    }, 100);
-    console.log(document.querySelector("audio").currentTime);
-    console.log(document.querySelector("#timeSlider").value, document.querySelector("#timeSlider").max);
+    data = JSON.parse(text)
+
+    main_filler()
     
     const list = document.getElementById("card_list")
     for(let i of data){
