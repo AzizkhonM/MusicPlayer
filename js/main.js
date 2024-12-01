@@ -13,7 +13,6 @@ function main_filler(){
     let element = Math.round(Math.random() * 19)
     console.log(element);
     
-    timeSlider.style.background = `linear-gradient(to right, ${color} ${progressPercent}%, #ccc ${progressPercent}%)`;
     getLyrics(data[element].lyrics)
     document.getElementById("artist").innerHTML = data[element].author
     document.getElementById("track").innerHTML = data[element].track
