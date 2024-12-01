@@ -20,7 +20,7 @@ function main_filler(){
     document.getElementById("album").innerHTML = data[element].album
     document.getElementById("cover").src = `../img/cover/${data[element].cover}`
     document.querySelector(".music_background").style.backgroundImage = `url(../img/background/${data[element].background})`
-    document.querySelector("audio").src = `../public/music/${data[element].audio}`
+    document.querySelector("audio").src = `../music/${data[element].audio}`
     setTimeout(() => {
         document.querySelector("#timeSlider").value = 0;
         document.querySelector("#timeSlider").max = 100;
