@@ -202,20 +202,20 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
         let box = document.createElement("div")
         gradient.appendChild(box)
 
-        let artist = document.createElement("h1")
-        artist.innerHTML = i.author
-        artist.setAttribute("class", "card_artist")
-        box.appendChild(artist)
+        let album = document.createElement("h1")
+        album.innerHTML = i.album
+        album.setAttribute("class", "card_album")
+        box.appendChild(album)
 
         let track = document.createElement("h1")
         track.innerHTML = i.track
         track.setAttribute("class", "card_track")
         box.appendChild(track)
 
-        let album = document.createElement("h1")
-        album.innerHTML = i.album
-        album.setAttribute("class", "card_album")
-        box.appendChild(album)
+        let artist = document.createElement("h1")
+        artist.innerHTML = i.author
+        artist.setAttribute("class", "card_artist")
+        box.appendChild(artist)
 
         list.appendChild(card2)
     }
