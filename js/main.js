@@ -8,10 +8,20 @@ function getLyrics(a){
 
 const color = "#c57613"
 let data = ""
+let element = 0
+let previousAgain = false
 
 function main_filler(){
-    let element = Math.round(Math.random() * 19)
+    previousAgain = false
+    if(element == -1){
+        element = data.length-1
+    }
+    console.log("Hello");
+    
     console.log(element);
+    if(element == data.length){
+        element = 0
+    }
     
     getLyrics(data[element].lyrics)
     document.getElementById("artist").innerHTML = data[element].author
@@ -123,12 +133,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     previousButton.addEventListener("click", () => {
-        if(audio.currentTime < 5){
+        if(audio.currentTime < 5 && previousAgain == false){
             audio.currentTime = 0
+            previousAgain = true
+        } else{
+            element--
+            main_filler()
+            audio.play()
+            playPauseButton.src = "/img/pause.svg"
+            playPauseButton.style.width = "29px"
+            vinyl.setAttribute("class", "rotating")
         }
     })
 
     nextButton.addEventListener("click", () => {
+        element++
         main_filler()
         audio.play()
         playPauseButton.src = "/img/pause.svg"
