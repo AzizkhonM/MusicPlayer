@@ -43,13 +43,13 @@ const months = [
 ]
 
 const days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
 ]
 
 const weather_types = [
@@ -72,7 +72,8 @@ function updateTime() {
     const hours = String(now.getHours()).padStart(2, '0'); 
     const minutes = String(now.getMinutes()).padStart(2, '0');
     document.getElementById('hourminute').textContent = `${hours}:${minutes}`;
-    document.getElementById("day").textContent =  `${days[now.getDay() - 1]}, ${months[now.getMonth()]} ${now.getDate()}`
+    
+    document.getElementById("day").textContent =  `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`
 }
 updateTime()
 setInterval(updateTime, 10000);
@@ -156,10 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         if(progressPercent == 100){
-            audio.pause();
-            audio.currentTime = 0
-            playPauseButton.src = "/img/play.svg"
-            vinyl.setAttribute("class", "rotatingg")
+            main_filler()
+            audio.play()
+            playPauseButton.src = "/img/pause.svg"
+            playPauseButton.style.width = "29px"
+            vinyl.setAttribute("class", "rotating")
         }
         
       
