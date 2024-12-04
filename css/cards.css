@@ -106,3 +106,248 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+#card_list{
+    font-family: "Spotify";
+}
+
+@media only screen and (min-width: 1280px){
+    #card_list{
+        display: grid;
+        gap: 56px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1280px){
+    #card_list{
+        gap: 30px;
+    }
+
+    .card_album{
+        font-size: 12px;
+    }
+    
+    .card_track{
+        font-size: 22px;
+    }
+    
+    .card_artist{
+        font-size: 14px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1100px){
+    #card_list{
+        gap: 30px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 14px;
+    }
+    
+    .card_track{
+        font-size: 26px;
+    }
+    
+    .card_artist{
+        font-size: 16px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1024px){
+    #card_list{
+        gap: 30px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 12px;
+    }
+    
+    .card_track{
+        font-size: 22px;
+    }
+    
+    .card_artist{
+        font-size: 14px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 850px){
+    #card_list{
+        gap: 30px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 10px;
+    }
+    
+    .card_track{
+        font-size: 18px;
+    }
+    
+    .card_artist{
+        font-size: 12px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px){
+    #card_list{
+        gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 14px;
+    }
+    
+    .card_track{
+        font-size: 26px;
+    }
+    
+    .card_artist{
+        font-size: 16px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 640px){
+    #card_list{
+        gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 12px;
+    }
+    
+    .card_track{
+        font-size: 22px;
+    }
+    
+    .card_artist{
+        font-size: 14px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 1.7rem;
+    }
+
+    #mySongs{
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 640px){
+    #card_list{
+        gap: 15px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 10px;
+    }
+    
+    .card_track{
+        font-size: 20px;
+    }
+    
+    .card_artist{
+        font-size: 12px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 1.7rem;
+    }
+
+    #mySongs{
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 475px) and (max-width: 550px){
+    #card_list{
+        gap: 15px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .card_track{
+        font-size: 42px;
+        margin-bottom: 8px;
+        line-height: 50px;
+    }
+    
+    .card_artist{
+        font-size: 24px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 46px;
+    }
+
+    #mySongs{
+        font-size: 50px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 475px){
+    #card_list{
+        gap: 15px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .card_track{
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+    
+    .card_artist{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 2rem;
+    }
+
+    #mySongs{
+        font-size: 50px;
+        text-align: center;
+    }
+}

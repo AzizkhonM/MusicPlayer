@@ -12,6 +12,9 @@ let element = 0
 let previousAgain = false
 
 function main_filler(){
+    // let element = Math.round(Math.random() * 19)
+    // console.log(element);
+
     previousAgain = false
     if(element == -1){
         element = data.length-1
