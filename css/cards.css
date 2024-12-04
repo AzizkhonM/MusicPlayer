@@ -351,3 +351,34 @@
         text-align: center;
     }
 }
+
+@media only screen and (min-width: 350px) and (max-width: 400px){
+    #card_list{
+        gap: 15px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));;
+    }
+
+    .card_album{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .card_track{
+        font-size: 22px;
+        line-height: 32px;
+    }
+    
+    .card_artist{
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .card2:hover .card_track {
+        font-size: 30px;
+    }
+
+    #mySongs{
+        font-size: 50px;
+        text-align: center;
+    }
+}
