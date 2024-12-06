@@ -6,6 +6,7 @@
         "album": "After Hours",
         "cover": "AfterHours_Cover.jpg",
         "background": "AfterHours_Wallpaper.jpg",
+        "vertBack": "AfterHours_VertWall.jpg",
         "lyrics": "BlindingLights.txt",
         "audio": "Blinding_Lights.mp3"
     },
@@ -16,6 +17,7 @@
         "album": "Dancing in the Flames",
         "cover": "DancingInTheFlames_Cover.jpg",
         "background": "DancingInTheFlames_Wallpaper.png",
+        "vertBack": "DancingInTheFlames_VertWall.jpeg",
         "lyrics": "DancingInTheFlames.txt",
         "audio": "Dancing_In_The_Flames.mp3"
     },
@@ -26,6 +28,7 @@
         "album": "Die with a Smile",
         "cover": "DieWithASmile_Cover.jpg",
         "background": "DieWithASmile_Wallpaper.jpg",
+        "vertBack": "DieWithASmile_VertWall.jpeg",
         "lyrics": "DieWithASmile.txt",
         "audio": "Die_With_A_Smile.mp3"
     },
@@ -66,6 +69,7 @@
         "album": "After Hours",
         "cover": "AfterHours_Cover.jpg",
         "background": "AfterHours_Wallpaper.jpg",
+        "vertBack": "AfterHours_VertWall.jpg",
         "lyrics": "Heartless.txt",
         "audio": "Heartless.mp3"
     },
@@ -76,6 +80,7 @@
         "album": "Beauty Behind The Madness",
         "cover": "BeautyBehindTheMadness_Cover.jpg",
         "background": "BeautyBehindTheMadness_Wallpaper.jpg",
+        "vertBack": "BeautyBehindTheMadness_VertWall.jpg",
         "lyrics": "InTheNight.txt",
         "audio": "In_The_Night.mp3"
     },
@@ -136,6 +141,7 @@
         "album": "Starboy",
         "cover": "Starboy_Cover.jpg",
         "background": "Starboy_Wallpaper.png",
+        "vertBack": "Starboy_VertWall.jpg",
         "lyrics": "Reminder.txt",
         "audio": "Reminder.mp3"
     },
@@ -146,6 +152,7 @@
         "album": "After Hours",
         "cover": "AfterHours_Cover.jpg",
         "background": "AfterHours_Wallpaper.jpg",
+        "vertBack": "AfterHours_VertWall.jpg",
         "lyrics": "SaveYourTears.txt",
         "audio": "Save_Your_Tears.mp3"
     },
@@ -156,6 +163,7 @@
         "album": "Starboy",
         "cover": "Starboy_Cover.jpg",
         "background": "Starboy_Wallpaper.png",
+        "vertBack": "Starboy_VertWall.jpg",
         "lyrics": "Starboy.txt",
         "audio": "Starboy.mp3"
     },
@@ -176,6 +184,7 @@
         "album": "Beauty Behind The Madness",
         "cover": "BeautyBehindTheMadness_Cover.jpg",
         "background": "BeautyBehindTheMadness_Wallpaper.jpg",
+        "vertBack": "BeautyBehindTheMadness_VertWall.jpg",
         "lyrics": "TheHills.txt",
         "audio": "The_Hills.mp3"
     },

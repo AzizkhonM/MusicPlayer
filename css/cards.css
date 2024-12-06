@@ -289,6 +289,12 @@
     }
 }
 
+@media only screen and (max-width: 640px){
+    .lyrics{
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 475px) and (max-width: 550px){
     #card_list{
         gap: 15px;

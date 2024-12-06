@@ -12,6 +12,17 @@ let element = 0
 let previousAgain = false
 
 function main_filler(){
+
+    function setBackgroundImage() {
+        const div = document.querySelector('.music_background');
+        if (window.innerWidth <= 640) {
+          div.style.backgroundImage = `url(../img/vertBack/${data[element].vertBack})`;
+          vinyl.style.display = "none"
+        } else {
+          div.style.backgroundImage = `url(../img/background/${data[element].background})`;
+          vinyl.style.display = "block"
+        }
+      }
     // let element = Math.round(Math.random() * 19)
     // console.log(element);
 
@@ -27,6 +38,7 @@ function main_filler(){
     }
     
     getLyrics(data[element].lyrics)
+    
     document.getElementById("artist").innerHTML = data[element].author
     document.getElementById("track").innerHTML = data[element].track
     document.getElementById("album").innerHTML = data[element].album
@@ -37,6 +49,10 @@ function main_filler(){
         document.querySelector("#timeSlider").value = 0;
         document.querySelector("#timeSlider").max = 100;
     }, 100);
+      
+    setBackgroundImage();
+      
+    window.addEventListener('resize', setBackgroundImage);
 }
 
 const months = [
@@ -193,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         timeSlider.style.background = `linear-gradient(to right, ${color} ${progressPercent}%, #ccc ${progressPercent}%)`;
       });
 });
+  
 
 fetch("../data/data.json").then(r=>r.text()).then(text => {
     data = JSON.parse(text)
@@ -215,6 +232,7 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
         let card2 = document.createElement("div")
         card2.setAttribute("class", "card2")
         card2.style.backgroundImage = `url(../img/cover/${i.cover})`
+        card2.setAttribute("id", `song-${i.id}`)
 
         let gradient = document.createElement("div")
         gradient.setAttribute("class", "gradient2")
@@ -241,6 +259,26 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
         list.appendChild(card2)
     }
 })
+
+
+setTimeout(() => {
+    document.querySelectorAll('.card2').forEach(card => {
+        card.addEventListener('click', function () {
+            const audio = document.getElementById("audioPlayer");
+            element = card.id.split("-")[1] - 1
+            main_filler()
+            audio.play()
+            playPauseButton.src = "/img/pause.svg"
+            playPauseButton.style.width = "29px"
+            vinyl.setAttribute("class", "rotating")
+            document.body.scrollIntoView({
+                behavior: 'smooth'
+              });
+        });
+      });
+}, 100);
+
+
 
 const gradient = document.querySelector(".gradient")
 const height = gradient.offsetHeight;

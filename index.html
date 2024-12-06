@@ -37,30 +37,30 @@
         <div class="music_background">
             <div class="bg-black bg-opacity-50 px-10">
                 <div class="container mx-auto">
-                    <div class="main grid grid-cols-3 items-center">
-                        <div class="time"  style="text-align: left;">
+                    <div class="main grid md:grid-cols-3 grid-cols-2 items-center">
+                        <div class="time text-left">
                             <b><h1 style="font-size: 3rem;" id="hourminute"></h1></b>
-                            <b><h1 id="day"></h1></b>
+                            <b><h1 id="day" class="sm:text-base text-xs"></h1></b>
                         </div>
-                        <div class="weather" style="text-align: center;">
+                        <div class="weather text-right md:text-center">
                             <b><h1 style="font-size: 3rem;" id="degree"></h1></b>
-                            <b><h1 id="weather_type"></h1></b>
+                            <b><h1 id="weather_type" class="sm:text-base text-xs"></h1></b>
                         </div>
-                        <div class="user grid grid-cols-4 items-center" style="text-align: right;">
+                        <div class="user hidden md:grid grid-cols-4 items-center" style="text-align: right;">
                             <div class="col-span-2 flex justify-end"><img src="img/man.png" width="30%" alt=""></div>
                             <div class="col-span-2 flex justify-start" style="flex-direction: column;">
-                                <b><h1 style="font-size: 2rem; overflow-wrap: break-word;">@azizkhon</h1></b>
-                                <b><h1>Azizkhon Muzaffarov</h1></b>
+                                <b><h1 style="font-size: 2rem; overflow-wrap: break-word;">@meloman</h1></b>
+                                <b><h1>John Doe</h1></b>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-2 items-center mt-7">
+                    <div class="grid sm:grid-cols-2 grid-cols-1 main_down items-center mt-7">
                         <div id="about_track">
                             <h1 id="artist" class="text-2xl mb-4"></h1>
                             <h1 id="track" class="text-5xl mb-4"></h1>
                             <h1 id="album" class="text-1xl mb-7"></h1>
-                            <div class="grid grid-cols-2"><img draggable="false" class="rounded-lg shadow-xl shadow-neutral-700 hover:shadow-neutral-900 duration-500 hover:cursor-pointer" src="" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotatingg" id="vinyl" alt="" width="75%" style="margin-left: -62.5%; z-index: 1;"></div>
+                            <div class="grid grid-cols-1 justify-items-center sm:justify-start sm:grid-cols-2"><img draggable="false" class="rounded-lg shadow-xl shadow-neutral-700 hover:shadow-neutral-900 duration-500 hover:cursor-pointer" src="" alt="" width="75%" id="cover" style="z-index: 2; text-align: right;"><img draggable="false" src="/img/vinyl.png" class="rotatingg sm:block hidden" id="vinyl" alt="" width="75%" style="margin-left: -125%; z-index: 1;"></div>
                         </div>
                         <div class="lyrics bg-black bg-opacity-40"><p id="lyrics_text"></p></div>
                     </div>
@@ -80,7 +80,7 @@
 
         <div class="bg-stone-900 h-auto px-10">
             <div class="container mx-auto py-8 h-auto">
-                <h1 class="text-6xl mb-8 text-white">My Songs</h1>
+                <h1 class="text-6xl text-center sm:text-left mb-8 text-white">My Songs</h1>
                 <div id="card_list" class="grid grid-cols-4 gap-14">
                     
                         <!-- <div class="card">
