@@ -30,9 +30,7 @@ function main_filler(){
     if(element == -1){
         element = data.length-1
     }
-    console.log("Hello");
     
-    console.log(element);
     if(element == data.length){
         element = 0
     }
@@ -120,8 +118,8 @@ async function getWeather() {
         }
         
         console.log(`
-Temperature: ${currentWeather.temperature} <br>
-Wind Speed: ${currentWeather.windspeed} km/h <br>
+Temperature: ${currentWeather.temperature}
+Wind Speed: ${currentWeather.windspeed} km/h
 Weather: ${currentWeather.weathercode}`)
     } catch (error) {
       console.error('Error fetching weather data:', error);
@@ -189,11 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
       
         // Calculate progress percentage
         const progressPercent = (currentTime / duration) * 100;
-        console.log(progressPercent)
-        console.log(audio.currentTime);
-        
 
         if(progressPercent == 100){
+            element++
             main_filler()
             audio.play()
             playPauseButton.src = "/img/pause.svg"

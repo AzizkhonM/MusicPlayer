@@ -17,7 +17,7 @@
         "album": "Dancing in the Flames",
         "cover": "DancingInTheFlames_Cover.jpg",
         "background": "DancingInTheFlames_Wallpaper.png",
-        "vertBack": "DancingInTheFlames_VertWall.jpeg",
+        "vertBack": "DancingInTheFlames_VertWall.jpg",
         "lyrics": "DancingInTheFlames.txt",
         "audio": "Dancing_In_The_Flames.mp3"
     },
@@ -39,6 +39,7 @@
         "album": "Future Nostalgia",
         "cover": "FutureNostalgia_Cover.jpg",
         "background": "FutureNostalgia_Wallpaper.jpg",
+        "vertBack": "FutureNostalgia_VertWall.jpg",
         "lyrics": "DontStartNow.txt",
         "audio": "Dont_Start_Now.mp3"
     },
@@ -49,6 +50,7 @@
         "album": "Decide",
         "cover": "Decide_Cover.jpg",
         "background": "EndOfBeginnning_Wallpaper.jpg",
+        "vertBack": "EndOfBeginning_VertWall.jpg",
         "lyrics": "EndOfBeginning.txt",
         "audio": "End_Of_Beginning.mp3"
     },
@@ -59,6 +61,7 @@
         "album": "Short n' Sweet",
         "cover": "ShortnSweet_Cover.jpg",
         "background": "ShortnSweet_Wallpaper.jpg",
+        "vertBack": "ShortnSweet_VertWall.png",
         "lyrics": "Espresso.txt",
         "audio": "Espresso.mp3"
     },
@@ -91,6 +94,7 @@
         "album": "Currents",
         "cover": "Currents_Cover.jpg",
         "background": "Currents_Wallpaper.jpg",
+        "vertBack": "Currents_VertWall.jpg",
         "lyrics": "LetItHappen.txt",
         "audio": "Let_It_Happen.mp3"
     },
@@ -101,28 +105,31 @@
         "album": "Hurry Up, We're Dreaming",
         "cover": "HurryUpWereDreaming_Cover.jpg",
         "background": "HurryUpWereDreaming_Wallpaper.jpg",
+        "vertBack": "HurryUpWerDreaming_VertWall.jpg",
         "lyrics": "MidnightCity.txt",
         "audio": "Midnight_City.mp3"
     },
     {
         "id": 11,
+        "track": "Moth To A Flame",
+        "author": "Swedish House Mafia, The Weeknd",
+        "album": "Dawn FM (Alternate World)",
+        "cover": "DawnFM_Cover.jpg",
+        "background": "DawnFM_Wallpaper.jpg",
+        "vertBack": "DawnFM_VertWall.jpg",
+        "lyrics": "MothToAFlame.txt",
+        "audio": "Moth_To_A_Flame.mp3"
+    },
+    {
+        "id": 12,
         "track": "Nightcall",
         "author": "Kavinsky",
         "album": "Outrun",
         "cover": "Outrun_Cover.jpg",
         "background": "Outrun_Wallpaper.jpg",
+        "vertBack": "Outrun_VertWall.jpg",
         "lyrics": "Nightcall.txt",
         "audio": "Nightcall.mp3"
-    },
-    {
-        "id": 12,
-        "track": "One Kiss",
-        "author": "Calvin Harris, Dua Lipa",
-        "album": "One Kiss",
-        "cover": "OneKiss_Cover.jpg",
-        "background": "OneKiss_Wallpaper.png",
-        "lyrics": "OneKiss.txt",
-        "audio": "One_Kiss.mp3"
     },
     {
         "id": 13,
@@ -131,6 +138,7 @@
         "album": "Short n' Sweet",
         "cover": "ShortnSweet_Cover.jpg",
         "background": "ShortnSweet_Wallpaper.jpg",
+        "vertBack": "ShortnSweet_VertWall.png",
         "lyrics": "PleasePleasePlease.txt",
         "audio": "Please_Please_Please.mp3"
     },
@@ -174,6 +182,7 @@
         "album": "eternal sunshine",
         "cover": "EternalSunshine_Cover.jpg",
         "background": "EternalSunshine_Wallpaper.jpg",
+        "vertBack": "EternalSunshine_VertBack.jpg",
         "lyrics": "TheBoyIsMine.txt",
         "audio": "The_Boy_Is_Mine.mp3"
     },
@@ -195,6 +204,7 @@
         "album": "Uptown Special",
         "cover": "UptownSpecial_Cover.jpg",
         "background": "UptownSpecial_Wallpaper.png",
+        "vertBack": "UptownSpecial_VertWall.jpg",
         "lyrics": "UptownFunk.txt",
         "audio": "Uptown_Funk.mp3"
     },
@@ -205,6 +215,7 @@
         "album": "eternal sunshine",
         "cover": "EternalSunshine_Cover.jpg",
         "background": "EternalSunshine_Wallpaper.jpg",
+        "vertBack": "EternalSunshine_VertBack.jpg",
         "lyrics": "WeCantBeFriends.txt",
         "audio": "We_Cant_Be_Friends.mp3"
     }
