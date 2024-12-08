@@ -110,7 +110,9 @@ async function getWeather() {
         const data = await response.json();
         const currentWeather = data.current_weather;
         
-        document.getElementById("degree").innerHTML = `${Number(String(currentWeather.temperature)[0])}°C`
+        
+        
+        document.getElementById("degree").innerHTML = `${Number(String(currentWeather.temperature).split(".")[0])}°C`
         if(currentWeather.weathercode < 10){
             document.getElementById("weather_type").innerHTML = weather_types[currentWeather.weathercode]
         } else{
