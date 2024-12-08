@@ -25,24 +25,30 @@ function getLyrics(a){
 //       });
 // }, 100);
 
-setTimeout(() => {
-    let cards = document.querySelectorAll('.card2')
-    for(let i of cards){
-        i.addEventListener("click", () => {
-            const audio = document.getElementById("audioPlayer");
-            console.log(i.id);
-            element = i.id.split("-")[1] - 1
-            main_filler()
-            audio.play()
-            playPauseButton.src = "/img/pause.svg"
-            playPauseButton.style.width = "29px"
-            vinyl.setAttribute("class", "rotating")
-            document.body.scrollIntoView({
-                behavior: 'smooth'
-              });      
-        })
-    }
-}, 100);
+document.addEventListener("DOMContentLoaded", () => {
+    const observeCards = () => {
+        let cards = document.querySelectorAll('.card2');
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                const audio = document.getElementById("audioPlayer");
+                element = card.id.split("-")[1] - 1;
+                main_filler();
+                audio.play();
+                playPauseButton.src = "/img/pause.svg";
+                playPauseButton.style.width = "29px";
+                vinyl.setAttribute("class", "rotating");
+                document.body.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    };
+
+    observeCards();
+
+    const observer = new MutationObserver(() => observeCards());
+    observer.observe(document.body, { childList: true, subtree: true });
+});
 
 const color = "#c57613"
 let data = ""
