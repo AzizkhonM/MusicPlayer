@@ -282,13 +282,10 @@ setTimeout(() => {
     const modalContent = document.getElementById('modalContent');
     const closeButton = document.getElementById('closeModal');
 
-    console.log(cover);
-    console.log(1);
-    
+    console.log(cover);    
     
     // Open modal on image click
     cover.addEventListener('click', () => {
-        console.log(1);
         
       const imageSrc = cover.src; // Get the source of the clicked image
       modalContent.style.backgroundImage = `url(${imageSrc})`;

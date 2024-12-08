@@ -22,7 +22,7 @@
   /* Modal content */
   .modal-content {
     position: relative;
-    height: 80%;
+    width: clamp(350px, 50%, 500px);
     aspect-ratio: 1/1;  
     background-size: cover;
     background-position: center;
