@@ -6,6 +6,25 @@ function getLyrics(a){
     })
 }
 
+setTimeout(() => {
+    document.querySelectorAll('.card2').forEach(card => {
+        card.addEventListener('click', () => {
+            console.log(1);
+            const audio = document.getElementById("audioPlayer");
+            console.log(audio)
+            element = card.id.split("-")[1] - 1
+            main_filler()
+            audio.play()
+            playPauseButton.src = "/img/pause.svg"
+            playPauseButton.style.width = "29px"
+            vinyl.setAttribute("class", "rotating")
+            document.body.scrollIntoView({
+                behavior: 'smooth'
+              });
+        });
+      });
+}, 100);
+
 const color = "#c57613"
 let data = ""
 let element = 0
@@ -258,25 +277,6 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
     }
 })
 
-
-setTimeout(() => {
-    document.querySelectorAll('.card2').forEach(card => {
-        card.addEventListener('click', () => {
-            console.log(1);
-            const audio = document.getElementById("audioPlayer");
-            console.log(audio)
-            element = card.id.split("-")[1] - 1
-            main_filler()
-            audio.play()
-            playPauseButton.src = "/img/pause.svg"
-            playPauseButton.style.width = "29px"
-            vinyl.setAttribute("class", "rotating")
-            document.body.scrollIntoView({
-                behavior: 'smooth'
-              });
-        });
-      });
-}, 100);
 
 setTimeout(() => {
     const cover = document.querySelector("#cover")
