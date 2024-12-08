@@ -6,13 +6,32 @@ function getLyrics(a){
     })
 }
 
+// setTimeout(() => {
+//     document.querySelectorAll('.card2').forEach(card => {
+//         card.addEventListener('click', () => {
+//             console.log(1);
+//             const audio = document.getElementById("audioPlayer");
+//             console.log(audio)
+//             element = card.id.split("-")[1] - 1
+//             main_filler()
+//             audio.play()
+//             playPauseButton.src = "/img/pause.svg"
+//             playPauseButton.style.width = "29px"
+//             vinyl.setAttribute("class", "rotating")
+//             document.body.scrollIntoView({
+//                 behavior: 'smooth'
+//               });
+//         });
+//       });
+// }, 100);
+
 setTimeout(() => {
-    document.querySelectorAll('.card2').forEach(card => {
-        card.addEventListener('click', () => {
-            console.log(1);
+    let cards = document.querySelectorAll('.card2')
+    for(let i of cards){
+        i.addEventListener("click", () => {
             const audio = document.getElementById("audioPlayer");
-            console.log(audio)
-            element = card.id.split("-")[1] - 1
+            console.log(i.id);
+            element = i.id.split("-")[1] - 1
             main_filler()
             audio.play()
             playPauseButton.src = "/img/pause.svg"
@@ -20,9 +39,9 @@ setTimeout(() => {
             vinyl.setAttribute("class", "rotating")
             document.body.scrollIntoView({
                 behavior: 'smooth'
-              });
-        });
-      });
+              });      
+        })
+    }
 }, 100);
 
 const color = "#c57613"
