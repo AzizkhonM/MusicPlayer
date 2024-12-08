@@ -261,7 +261,7 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
 
 setTimeout(() => {
     document.querySelectorAll('.card2').forEach(card => {
-        card.addEventListener('click', function () {
+        card.addEventListener('click', () => {
             console.log(1);
             const audio = document.getElementById("audioPlayer");
             console.log(audio)
