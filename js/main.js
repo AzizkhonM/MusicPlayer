@@ -262,7 +262,9 @@ fetch("../data/data.json").then(r=>r.text()).then(text => {
 setTimeout(() => {
     document.querySelectorAll('.card2').forEach(card => {
         card.addEventListener('click', function () {
+            console.log(1);
             const audio = document.getElementById("audioPlayer");
+            
             element = card.id.split("-")[1] - 1
             main_filler()
             audio.play()
@@ -304,9 +306,6 @@ setTimeout(() => {
       }
     });
 }, 100)
-
-console.log(1234);
-
 
 
 const gradient = document.querySelector(".gradient")
