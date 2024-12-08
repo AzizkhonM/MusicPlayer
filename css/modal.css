@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .modal.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Modal content */
+  .modal-content {
+    position: relative;
+    height: 80%;
+    aspect-ratio: 1/1;  
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+
+  /* Close button */
+  .close-button {
+    position: absolute;
+    right: 10px;
+    color: white;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }

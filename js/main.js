@@ -276,6 +276,40 @@ setTimeout(() => {
       });
 }, 100);
 
+setTimeout(() => {
+    const cover = document.querySelector("#cover")
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeButton = document.getElementById('closeModal');
+
+    console.log(cover);
+    console.log(1);
+    
+    
+    // Open modal on image click
+    cover.addEventListener('click', () => {
+        console.log(1);
+        
+      const imageSrc = cover.src; // Get the source of the clicked image
+      modalContent.style.backgroundImage = `url(${imageSrc})`;
+      modal.classList.add('active'); // Show the modal
+    });
+
+    // Close modal on close button click
+    closeButton.addEventListener('click', () => {
+      modal.classList.remove('active'); // Hide the modal
+    });
+
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+}, 100)
+
+console.log(1234);
+
 
 
 const gradient = document.querySelector(".gradient")
