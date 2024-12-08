@@ -264,7 +264,7 @@ setTimeout(() => {
         card.addEventListener('click', function () {
             console.log(1);
             const audio = document.getElementById("audioPlayer");
-            
+            console.log(audio)
             element = card.id.split("-")[1] - 1
             main_filler()
             audio.play()
